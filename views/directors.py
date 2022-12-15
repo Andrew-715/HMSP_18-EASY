@@ -3,6 +3,7 @@ from flask_restx import Resource, Namespace
 from models import DirectorSchema, Director
 from setup_db import db
 
+
 director_ns = Namespace('directors')
 
 director_schema = DirectorSchema()

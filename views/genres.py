@@ -3,6 +3,7 @@ from flask_restx import Resource, Namespace
 from models import GenreSchema, Genre
 from setup_db import db
 
+
 genre_ns = Namespace('genres')
 
 genre_schema = GenreSchema()

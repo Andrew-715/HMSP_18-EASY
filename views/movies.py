@@ -1,23 +1,9 @@
-# здесь контроллеры/хендлеры/представления для обработки запросов (flask ручки). сюда импортируются сервисы из пакета service
-
-# Пример
-# from flask_restx import Resource, Namespace
-#
-# book_ns = Namespace('books')
-#
-#
-# @book_ns.route('/')
-# class BooksView(Resource):
-#     def get(self):
-#         return "", 200
-#
-#     def post(self):
-#         return "", 201
 from flask_restx import Resource, Namespace
 from flask import request
 
 from models import Movie, MovieSchema
 from setup_db import db
+
 
 movies_ns = Namespace('movies')
 
@@ -81,4 +67,3 @@ class MovieView(Resource):
         db.session.delete(movie)
         db.session.commit()
         return 'Movie deleted', 204
-
